@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:
+# Answer:Select ten random numbers between 1 and 100 and print the tenth
 
 # Import libraries
 # randint allows drawing a random number,
@@ -14,5 +14,4 @@ progress=0
 while progress<10:
 	progress+=1
 	n = randint(1,100)
-
 print(n)
