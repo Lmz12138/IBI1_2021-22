@@ -11,8 +11,8 @@ else:
     print("d is smaller than e")
 #d is smaller than e
 #the rate of 2021 is bigger than 2020
-x = 10
-y = 15
+x = 1
+y = 0
 bool(x)
 bool(y)
 print(bool(x))
@@ -34,7 +34,8 @@ y1 = np.array([0,0,1,1])
 for m in range(len(x1)):
     Name = "AND("+str(x1[m])+","+str(y1[m])+"):"
     Tmp = AND(x1[m],y1[m])
-    print(Name,str(Tmp))
+    W = Name
+    print(W,str(Tmp))
 
 
 
