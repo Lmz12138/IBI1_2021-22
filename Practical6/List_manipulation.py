@@ -1,8 +1,8 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt#import the matlab peckage
 marks = [45, 36, 86, 57, 53, 92, 65, 45]
 marks_sorted = sorted(marks) #sort this list
 print(marks_sorted)
-plt.boxplot(marks_sorted, vert=False, meanline=True)
+plt.boxplot(marks_sorted, vert=False, meanline=True)#custom the figure
 plt.show() # draw the boxplot
 import numpy as np
 average = np.mean(marks_sorted) #get the average
