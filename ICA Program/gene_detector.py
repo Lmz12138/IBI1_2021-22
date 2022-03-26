@@ -22,20 +22,20 @@ print(Gene_to_test)#生成一个基因
 Seq1 = Gene_to_test[:]
 sequences = ''.join(map(str, Gene_to_test))
 print(f"the sequences is AUG{sequences}TAA")
-n = random.randint(0, 2)
+n = random.randint(0, 2)#随机生成突变个数
 print(n)
-i = 1
+i = 1 #随机生成一个突变位点
 while i <= n:
 	result2 = random.choice(base)
 	i += 1
 	i1 = random.randint(0, 20)
 	print(i1)
 	Gene_to_test[i1] = f'{result2}'
-	print(result2)
+	print(result2)# #
 Seq2 = Gene_to_test[:]
 sequences2 = ''.join(map(str,Gene_to_test))
-print(f"the mutated gene is AUG{sequences2}TAA")
-def compare(list1, list2):
+print(f"the mutated gene is AUG{sequences2}TAA")#生成突变基因
+def compare(list1, list2):#对两个基因进行比较
 	error = []
 	error_index = []
 	if len(list1) == len(list2):
@@ -49,5 +49,37 @@ def compare(list1, list2):
 				print(f"the {error[0]} mutated to {error[1]}")
 				position = ''.join(map(str, error_index))
 				position = int(position)
-				print(f"the mutation positon is {position + 3}")
+				position = position + 3
+				position = str(position)
+				if len(position) < 3:
+					print(f"the mutation position is {i + 3}")
+				else:
+					print(f"the mutation position is {i + 3}")
 compare(sequences,sequences2)
+Amino_acid = []
+Amino_acid2 = []
+def aa_detector(s,Amino_acid):
+	i2 = 0
+	while i2 < len(s):
+		first_base = s[i2:i2 + 3]
+		aa = str(first_base)
+		print(Gene[aa])
+		i2 += 3
+		Amino_acid.append(Gene[aa])
+aa_detector(sequences,Amino_acid)
+print(Amino_acid)
+aa_detector(sequences2,Amino_acid2)
+print(Amino_acid2)
+def compare_aa(list1, list2):
+	error = []
+	error_index = []
+	if len(list1) == len(list2):
+		for i in range(0, len(list1)):
+			if list1[i] == list2[i]:
+				print("they are equal")
+			else:
+				error.append(list1[i])
+				error.append(list2[i])
+				error_index.append(i)
+				print(f"the amino acid changed from {error[0]} to {error[1]}")
+compare_aa(Amino_acid,Amino_acid2)
