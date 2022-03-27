@@ -3,7 +3,7 @@ Gene = {"TTT": "Phe","TCT": "Ser","TAT": "Tyr","TGT": "Cys","TTC": "Phe","TCC": 
 	"TAC": "Tyr","TGC": "Cys", "TTA": "Leu","TCA": "Ser","TAA": "stop", "TGA": "stop",
 	"TTG": "Leu","TCG": "Ser", "TAG": "stop","TGG": "Trp","CTT": "Leu","CCT": "Pro","CAT": "His",
 	"CGT": "Arg","CTC": "Leu","CCC": "Pro","CAC": "His","CGC": "Arg","CTA": "Leu","CCA": "Pro",
-	"CAA": "GIn","CGA": "Arg","CTG": "Leu","CCG": "Pro","CAG": "GIn","CGG": "Arg","ATT": "lle",
+	"CAA": "GIn","CGA": "Arg","CTG": "Leu","CCG": "Pro","CAG": "Gln","CGG": "Arg","ATT": "Lle",
 	"ACT": "Thr","AAT": "Asn","AGT": "Ser","ATC": "lle","ACC": "Thr","AAC": "Asn","AGC": "Ser",
 	"ATA": "lle","ACA": "Thr","AAA": "Lys","AGA": "Arg","ATG": "Met","ACG": "Thr","AAG": "Lys",
 	"AGG": "Arg","GTT": "Val","GCT": "Ala","GAT": "Asp","GGT": "Gly","GTC": "Val","GCC": "Ala",
