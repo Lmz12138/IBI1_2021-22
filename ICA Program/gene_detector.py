@@ -12,15 +12,14 @@ Gene = {"TTT": "Phe","TCT": "Ser","TAT": "Tyr","TGT": "Cys","TTC": "Phe","TCC": 
 print(Gene["GCG"])#test the dic
 base = ["A", "C", "G", "T"]
 switch = 1
-Gene_to_test = []
+Gene_to_test1 = []
 while switch <= 21:
 	result = random.choice(base)
 	switch += 1
 	print(result)
-	Gene_to_test.append(result)
-print(Gene_to_test)#生成一个基因
-Seq1 = Gene_to_test[:]
-sequences = ''.join(map(str, Gene_to_test))
+	Gene_to_test1.append(result)
+print(Gene_to_test1)#生成一个基因
+sequences = ''.join(map(str, Gene_to_test1))
 print(f"the sequences is AUG{sequences}TAA")
 n = random.randint(0, 2)#随机生成突变个数
 print(n)
@@ -30,10 +29,9 @@ while i <= n:
 	i += 1
 	i1 = random.randint(0, 20)
 	print(i1)
-	Gene_to_test[i1] = f'{result2}'
-	print(result2)# #
-Seq2 = Gene_to_test[:]
-sequences2 = ''.join(map(str,Gene_to_test))
+	Gene_to_test1[i1] = f'{result2}'
+	print(result2)
+sequences2 = ''.join(map(str,Gene_to_test1))
 print(f"the mutated gene is AUG{sequences2}TAA")#生成突变基因
 def compare(list1, list2):#对两个基因进行比较
 	error = []
@@ -52,9 +50,9 @@ def compare(list1, list2):#对两个基因进行比较
 				position = position + 3
 				position = str(position)
 				if len(position) < 3:
-					print(f"the mutation position is {i + 3}")
+					print(f"the mutation position is {i + 4}")
 				else:
-					print(f"the mutation position is {i + 3}")
+					print(f"the mutation position is {i + 4}")
 compare(sequences,sequences2)
 Amino_acid = []
 Amino_acid2 = []
@@ -83,3 +81,32 @@ def compare_aa(list1, list2):
 				error_index.append(i)
 				print(f"the amino acid changed from {error[0]} to {error[1]}")
 compare_aa(Amino_acid,Amino_acid2)
+#function 2
+syn = []
+nonsyn = []
+while len(syn) + len(nonsyn) <= 64:
+    result3 = random.choice(base)
+    i2 = random.randint(0, 20)
+    Gene_to_test1[i2] = f'{result3}'
+    sequences3 = ''.join(map(str, Gene_to_test1))
+    def counter(list1, list2):
+        if len(list1) == len(list2):
+            for i in range(0, len(list1)):
+                if list1[i] == list2[i]:
+                    pass
+                else:
+                    i2 = 0
+                    while i2 < len(list1):
+                        base = list1[i2:i2 + 3]
+                        base2 = list2[i2:i2 + 3]
+                        aa = str(base)
+                        aa2 = str(base2)
+                        i2 += 3
+        if Gene[aa] == Gene[aa2]:
+            nonsyn.append(aa)
+        else:
+            syn.append(f"{aa} mutate to {aa2} will change the amino acid")
+    counter(sequences, sequences3)
+print(len(syn))
+print(len(nonsyn))
+
