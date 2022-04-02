@@ -1,0 +1,5 @@
+How have confirmed cases and deaths changed over time in the United States?
+Draw a botplot and a plot to visualize the data
+The code which I written to solve the problem above is from line 63 to line 81
+That's what I expected. 
+In my opinion, the EPIDEMIC prevention and control policies of the United States were divorced from realityin the period given by the data, which led to the exponential growth of cases, in line with the laws of infectious diseases.
